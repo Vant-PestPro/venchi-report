@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pest Pro – German Roach Service Report – 1145 Lucaya Circle</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 11pt; color: #1a1a1a; }
+
+  @media print {
+    body { font-size: 9pt; }
+    .page { page-break-after: always; break-after: page; }
+    .page:last-child { page-break-after: auto; break-after: auto; }
+    @page { margin: 0.5in; size: letter portrait; }
+    .no-print { display: none; }
+  }
+
+  :root {
+    --navy: #1a2557;
+    --yellow: #FFB800;
+    --red: #cc2200;
+    --white: #ffffff;
+    --light-gray: #ebebeb;
+    --mid-gray: #999;
+  }
+
+  .page {
+    width: 8.5in;
+    margin: 0 auto 0.5in auto;
+    padding: 0.5in;
+    background: var(--white);
+  }
+
+  /* ===== PAGE HEADER ===== */
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--navy);
+    padding-bottom: 10px;
+    margin-bottom: 18px;
+  }
+  .header-logo { height: 52px; width: auto; display: block; }
+  .page-header .right-block { text-align: right; font-size: 8pt; color: var(--navy); line-height: 1.6; }
+  .page-header .right-block strong { display: block; font-size: 11pt; color: var(--navy); }
+
+  /* ===== SECTION TITLES ===== */
+  .section-title {
+    background: #ffffff;
+    color: var(--navy);
+    border-left: 5px solid var(--navy);
+    border-bottom: 2px solid var(--navy);
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    margin-top: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .section-sub { font-size: 9.5pt; color: #222; margin-bottom: 10px; line-height: 1.6; }
+
+  /* ===== INFO TABLE ===== */
+  .info-table { width: 100%; border-collapse: collapse; margin-bottom: 14px; font-size: 9.5pt; }
+  .info-table td { padding: 5px 8px; border: 1px solid #ccc; vertical-align: top; }
+  .info-table td.label { background: var(--light-gray); font-weight: bold; width: 30%; color: var(--navy); }
+  .info-table td.value { background: var(--white); }
+
+  /* ===== FINDINGS TABLE ===== */
+  .findings-table { width: 100%; border-collapse: collapse; font-size: 9pt; margin-bottom: 14px; }
+  .findings-table th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 6px 8px;
+    text-align: left;
+    font-size: 9pt;
+    border: 1px solid var(--navy);
+  }
+  .findings-table td {
+    border: 1px solid #aaa;
+    padding: 6px 8px;
+    vertical-align: top;
+    font-size: 9pt;
+    line-height: 1.5;
+  }
+  .findings-table tr:nth-child(even) td { background: var(--light-gray); }
+  .findings-table tr:nth-child(odd) td { background: var(--white); }
+
+  /* ===== SEVERITY BADGE ===== */
+  .severity-badge {
+    display: inline-block;
+    background: var(--red);
+    color: white;
+    font-weight: bold;
+    font-size: 10pt;
+    padding: 4px 14px;
+    border-radius: 3px;
+    letter-spacing: 0.5px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+
+  /* ===== PHOTO GRID ===== */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .photo-item {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+  .photo-caption {
+    background: var(--navy);
+    color: white;
+    font-size: 7.5pt;
+    padding: 4px 8px;
+    line-height: 1.4;
+  }
+  .photo-caption strong { font-size: 8pt; }
+
+  /* ===== RECOMMENDATION BOX ===== */
+  .rec-box {
+    border: 2px solid var(--navy);
+    border-left: 6px solid var(--yellow);
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    background: #fafafa;
+    font-size: 9.5pt;
+    line-height: 1.6;
+  }
+  .rec-box .rec-title {
+    font-weight: bold;
+    color: var(--navy);
+    font-size: 10pt;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+  }
+
+  /* ===== WARNING BOX ===== */
+  .warning-box {
+    border: 2px solid var(--red);
+    border-left: 6px solid var(--red);
+    padding: 10px 14px;
+    margin-bottom: 14px;
+    background: #fff5f5;
+    font-size: 9pt;
+    line-height: 1.6;
+    color: #333;
+  }
+  .warning-box .warn-title {
+    font-weight: bold;
+    color: var(--red);
+    font-size: 9.5pt;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+  }
+
+  /* ===== SIGNATURE BLOCK ===== */
+  .sig-block {
+    display: flex;
+    gap: 40px;
+    margin-top: 20px;
+    font-size: 9pt;
+  }
+  .sig-item { flex: 1; }
+  .sig-line {
+    border-bottom: 1px solid #444;
+    height: 28px;
+    margin-bottom: 4px;
+  }
+  .sig-label { font-size: 8pt; color: #666; }
+
+  /* ===== FOOTER ===== */
+  .page-footer {
+    border-top: 2px solid var(--navy);
+    margin-top: 24px;
+    padding-top: 8px;
+    font-size: 7.5pt;
+    color: #555;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  /* ===== COVER PAGE ===== */
+  .cover-page {
+    width: 8.5in;
+    height: 11in;
+    margin: 0 auto 0.5in auto;
+    padding: 0.75in 0.75in 0.5in 0.75in;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    border: 8px solid var(--navy);
+  }
+  .cover-logo-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid var(--navy);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+  .cover-logo { height: 70px; width: auto; }
+  .cover-license-block { text-align: right; font-size: 8pt; color: #444; line-height: 1.7; }
+  .cover-license-block strong { font-size: 9pt; color: var(--navy); }
+  .cover-title-block { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .cover-report-type {
+    font-size: 11pt;
+    color: var(--navy);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+  .cover-pest {
+    font-size: 28pt;
+    font-weight: bold;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 6px;
+  }
+  .cover-pest span { color: var(--red); }
+  .cover-sub {
+    font-size: 13pt;
+    color: #555;
+    margin-bottom: 30px;
+  }
+  .cover-severity-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 30px;
+  }
+  .cover-severity-label { font-size: 10pt; color: #444; font-weight: bold; }
+  .cover-severity-badge {
+    background: var(--red);
+    color: white;
+    font-weight: bold;
+    font-size: 13pt;
+    padding: 6px 20px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+  .cover-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 2px solid var(--navy);
+    margin-bottom: 28px;
+  }
+  .cover-info-cell {
+    padding: 10px 14px;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    font-size: 9.5pt;
+    line-height: 1.5;
+  }
+  .cover-info-cell:nth-child(even) { border-right: none; }
+  .cover-info-cell .ci-label { font-size: 8pt; color: #888; text-transform: uppercase; letter-spacing: 0.5px; }
+  .cover-info-cell .ci-value { font-weight: bold; color: #1a1a1a; font-size: 10pt; }
+  .cover-bottom-bar {
+    border-top: 3px solid var(--navy);
+    padding-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .cover-contact { font-size: 8.5pt; color: #333; line-height: 1.6; }
+  .cover-contact strong { color: var(--navy); }
+  .cover-confidential { font-size: 8pt; color: #888; font-style: italic; text-align: right; }
+
+  /* ===== LIFE STAGES TABLE ===== */
+  .stages-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+  .stage-badge {
+    flex: 1;
+    text-align: center;
+    padding: 8px 6px;
+    border-radius: 3px;
+    font-size: 8.5pt;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+  .stage-badge.confirmed { background: var(--red); color: white; }
+  .stage-badge.label { font-size: 7.5pt; font-weight: normal; color: #555; margin-top: 4px; }
+
+  ul.findings-list {
+    font-size: 9.5pt;
+    line-height: 1.7;
+    padding-left: 18px;
+    margin-bottom: 10px;
+  }
+  ul.findings-list li { margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- PAGE 1: COVER -->
+<!-- ============================================================ -->
+<div class="cover-page">
+  <div class="cover-logo-bar">
+    <img src="logo.jpg" class="cover-logo" alt="Pest Pro Logo">
+    <div class="cover-license-block">
+      <strong>Pest Pro, LLC</strong><br>
+      3211 Vineland Road, #107<br>
+      Kissimmee, FL 34746<br>
+      (407) 922-2276 · info@PestProLLC.com<br>
+      License: JF288808 / JB304313
+    </div>
+  </div>
+
+  <div class="cover-title-block">
+    <div class="cover-report-type">Pest Control Service Report</div>
+    <div class="cover-pest">German Roach<br><span>Cleanout Service</span></div>
+    <div class="cover-sub">Initial Treatment &amp; Inspection Report</div>
+
+    <div class="cover-severity-row">
+      <div class="cover-severity-label">Infestation Level:</div>
+      <div class="cover-severity-badge">HEAVY — ALL LIFE STAGES</div>
+    </div>
+
+    <div class="cover-info-grid">
+      <div class="cover-info-cell">
+        <div class="ci-label">Client / Property Manager</div>
+        <div class="ci-value">Venchi Management, LLC</div>
+      </div>
+      <div class="cover-info-cell">
+        <div class="ci-label">Service Property</div>
+        <div class="ci-value">1145 Lucaya Circle, Orlando, FL 32824</div>
+      </div>
+      <div class="cover-info-cell">
+        <div class="ci-label">Service Request Received</div>
+        <div class="ci-value">Tuesday, April 7, 2026 · 4:00 PM</div>
+      </div>
+      <div class="cover-info-cell">
+        <div class="ci-label">Service Date</div>
+        <div class="ci-value">Wednesday, April 8, 2026</div>
+      </div>
+      <div class="cover-info-cell">
+        <div class="ci-label">Technician</div>
+        <div class="ci-value">Daniel Rumsey, CPO</div>
+      </div>
+      <div class="cover-info-cell">
+        <div class="ci-label">Account #</div>
+        <div class="ci-value">1052</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-bottom-bar">
+    <div class="cover-contact">
+      <strong>Pest Pro, LLC</strong> · (407) 922-2276 · info@PestProLLC.com<br>
+      3211 Vineland Road, #107, Kissimmee, FL 34746<br>
+      License No. JF288808 / JB304313
+    </div>
+    <div class="cover-confidential">Confidential — Prepared for Venchi Management, LLC<br>Report Date: April 9, 2026</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 2: SERVICE SUMMARY & FINDINGS -->
+<!-- ============================================================ -->
+<div class="page">
+  <div class="page-header">
+    <img src="logo.jpg" class="header-logo" alt="Pest Pro">
+    <div class="right-block">
+      <strong>German Roach Cleanout — Service Report</strong>
+      1145 Lucaya Circle, Orlando, FL 32824<br>
+      Service Date: April 8, 2026 · Account #1052
+    </div>
+  </div>
+
+  <div class="section-title">Service &amp; Property Information</div>
+  <table class="info-table">
+    <tr>
+      <td class="label">Client</td>
+      <td class="value">Venchi Management, LLC</td>
+      <td class="label">Account #</td>
+      <td class="value">1052</td>
+    </tr>
+    <tr>
+      <td class="label">Service Address</td>
+      <td class="value" colspan="3">1145 Lucaya Circle, Orlando, FL 32824</td>
+    </tr>
+    <tr>
+      <td class="label">Property Status</td>
+      <td class="value">Vacant — Pre-Tenant Turnover</td>
+      <td class="label">Service Type</td>
+      <td class="value">German Roach Cleanout (Initial Treatment)</td>
+    </tr>
+    <tr>
+      <td class="label">Service Requested</td>
+      <td class="value">Tuesday, April 7, 2026 · 4:00 PM</td>
+      <td class="label">Service Performed</td>
+      <td class="value">Wednesday, April 8, 2026</td>
+    </tr>
+    <tr>
+      <td class="label">Technician</td>
+      <td class="value">Daniel Rumsey, CPO — License JF288808</td>
+      <td class="label">Company License</td>
+      <td class="value">JB304313</td>
+    </tr>
+  </table>
+
+  <div class="section-title">Inspection Summary</div>
+  <p class="section-sub">
+    The property was inspected and treated for reported German Roach (Code R) activity. Upon arrival and inspection, the technician identified a <strong>heavy, active infestation of German Roaches (<em>Blattella germanica</em>) present in every room, bathroom, closet, and common area throughout the unit.</strong> All life stages were confirmed present, including adult males and females, nymphs of multiple instars, and a gravid (pregnant) female carrying an ootheca (egg case), indicating an active and established reproductive cycle.
+  </p>
+
+  <div class="section-title">Life Stages Confirmed on Premises</div>
+  <div class="stages-row">
+    <div class="stage-badge confirmed">✔ Egg Cases<br><span style="font-size:7.5pt;font-weight:normal;">(Ootheca)</span></div>
+    <div class="stage-badge confirmed">✔ Early Nymphs<br><span style="font-size:7.5pt;font-weight:normal;">(1st–2nd Instar)</span></div>
+    <div class="stage-badge confirmed">✔ Late Nymphs<br><span style="font-size:7.5pt;font-weight:normal;">(3rd–4th Instar)</span></div>
+    <div class="stage-badge confirmed">✔ Adult Males<br><span style="font-size:7.5pt;font-weight:normal;">Confirmed</span></div>
+    <div class="stage-badge confirmed">✔ Gravid Females<br><span style="font-size:7.5pt;font-weight:normal;">Active Reproduction</span></div>
+  </div>
+
+  <div class="section-title">Harborage &amp; Activity Locations</div>
+  <table class="findings-table">
+    <thead>
+      <tr>
+        <th style="width:28%;">Location</th>
+        <th>Observations</th>
+        <th style="width:22%;">Activity Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Kitchen — Appliances</strong></td>
+        <td>Primary source of infestation. Heavy nesting identified within the motors and rear panels of appliances. Dense frass accumulation, live roaches of all stages observed on walls, floor, and appliance surfaces.</td>
+        <td style="color:var(--red);font-weight:bold;">SEVERE — Primary Nest</td>
+      </tr>
+      <tr>
+        <td><strong>Kitchen — Cabinets &amp; Drawers</strong></td>
+        <td>Live roaches found on cabinet door panels and drawer fronts directly adjacent to the refrigerator. Multiple nymphs and adults observed. Heavy frass spotting along upper cabinet edges.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH</td>
+      </tr>
+      <tr>
+        <td><strong>Kitchen — Floor</strong></td>
+        <td>Multiple live roaches confirmed across kitchen floor surface, including adults and nymphs. Evidence of heavy foot traffic from infestation.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH</td>
+      </tr>
+      <tr>
+        <td><strong>Pantry Door Tracks</strong></td>
+        <td>Active nesting colony located within door track channels. Live roaches visible inside tracks. Heavy frass, debris, and surface staining. Consistent with long-term harboring.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH</td>
+      </tr>
+      <tr>
+        <td><strong>Under Sink</strong></td>
+        <td>Live roach activity confirmed. Frass spotting on cabinet walls. Unsealed gaps in cabinetry providing direct access to wall voids — a significant harborage entry point.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH</td>
+      </tr>
+      <tr>
+        <td><strong>Ceiling Corner(s)</strong></td>
+        <td>Heavy frass spotting scattered across wall and ceiling surfaces, concentrated at corner junctions. Confirms infestation has established harborage within upper wall voids well above ground level.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH</td>
+      </tr>
+      <tr>
+        <td><strong>Master Bedroom Closet</strong></td>
+        <td>Frass staining and roach debris visible on wall surfaces above shelving. Evidence of prior and current activity.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Master Bedroom Window Sill</strong></td>
+        <td>Live nymph observed on window sill near frame. Confirms spread into master bedroom.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Secondary Bedroom</strong></td>
+        <td>Live adult German roach observed at baseboard. Confirms infestation has spread to all sleeping areas.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Living Room</strong></td>
+        <td>Live nymph on wall at baseboard level. Dead roach on floor. Activity confirmed in primary common area.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Hallway</strong></td>
+        <td>Live adult German roach at base of door frame. Frass debris on floor nearby. Confirms full-unit spread via primary corridors.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Secondary / Guest Bathroom</strong></td>
+        <td>Live adult German roach confirmed on floor at baseboard junction. Activity present in both bathrooms.</td>
+        <td style="font-weight:bold;color:#b85c00;">MODERATE</td>
+      </tr>
+      <tr>
+        <td><strong>Cracks &amp; Crevices / Wall Voids / Door Frames</strong></td>
+        <td>Multiple nests flushed from cracks and crevices, wall voids, and door frames throughout the unit during treatment. Nesting evidence consistent with a long-established infestation.</td>
+        <td style="color:var(--red);font-weight:bold;">HIGH — Widespread</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-footer">
+    <div>Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com · License JF288808 / JB304313</div>
+    <div>1145 Lucaya Circle, Orlando, FL 32824 · Service Date: April 8, 2026 · Page 2</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 3: TREATMENT, RECOMMENDATIONS & PHOTOS (1) -->
+<!-- ============================================================ -->
+<div class="page">
+  <div class="page-header">
+    <img src="logo.jpg" class="header-logo" alt="Pest Pro">
+    <div class="right-block">
+      <strong>German Roach Cleanout — Service Report</strong>
+      1145 Lucaya Circle, Orlando, FL 32824<br>
+      Service Date: April 8, 2026 · Account #1052
+    </div>
+  </div>
+
+  <div class="section-title">Treatment Performed</div>
+  <p class="section-sub">
+    Initial cleanout treatment was performed throughout the entire unit. Treatment addressed all confirmed harborage areas including appliance voids and motors, cabinetry, pantry tracks, cracks and crevices, wall voids, door frames, baseboards, and all room areas where live activity was documented. Roaches were flushed from nesting sites during the course of treatment. A significant number of roaches were removed as a result of the initial service.
+  </p>
+
+  <div class="section-title">Recommendations &amp; Follow-Up Plan</div>
+
+  <div class="rec-box">
+    <div class="rec-title">⚠ Follow-Up Treatment Required</div>
+    Due to the severity and widespread nature of this infestation, a minimum of <strong>1 to 2 additional treatments</strong> will be required to achieve full eradication. German Roach infestations of this level — involving all life stages and multiple established nesting colonies — cannot be resolved with a single treatment. Eggs already deposited within the unit will continue to hatch following the initial service.<br><br>
+    <strong>Recommended follow-up window: 3–5 days from initial service (by April 11–13, 2026).</strong> Timely follow-up is critical to intercept emerging nymphs before they mature and re-establish harborage.
+  </div>
+
+  <div class="warning-box">
+    <div class="warn-title">⚑ Advisory — Pre-Tenant Turnover Cleanup</div>
+    A notable quantity of dead roaches were removed as a result of treatment. However, it is anticipated that additional dead roaches will continue to appear in the days following service as the treatment takes full effect. <strong>Pest Pro strongly recommends that the property be thoroughly cleaned — including behind and beneath all appliances, inside all cabinets, drawers, and closets — prior to turning the unit over to an incoming tenant.</strong> This recommendation is advisory in nature; Pest Pro's scope of work is limited to pest control services only.
+  </div>
+
+  <div class="warning-box">
+    <div class="warn-title">⚑ Advisory — Cabinetry Gaps &amp; Sanitation</div>
+    Unsealed gaps were identified in cabinetry below the sink, providing direct access to wall voids. <strong>Pest Pro recommends that these gaps be sealed prior to or concurrent with follow-up treatment</strong> to reduce reharborage potential and improve treatment efficacy. Additionally, the sanitation conditions observed behind the refrigerator (grease buildup, food debris) contributed significantly to harborage conditions and should be addressed during the cleaning process.
+  </div>
+
+  <div class="section-title">Photo Documentation — Kitchen &amp; Primary Nesting Zone</div>
+  <div class="photo-grid">
+    <div class="photo-item">
+      <img src="photo-fridge-1.jpg" alt="Behind refrigerator - primary nesting zone">
+      <div class="photo-caption"><strong>Behind Refrigerator — Primary Nesting Zone (View 1)</strong><br>Heavy frass accumulation on floor and baseboard. Live roaches visible on wall and floor. Sanitation debris consistent with long-established harborage.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-fridge-2.jpg" alt="Behind refrigerator - second angle">
+      <div class="photo-caption"><strong>Behind Refrigerator — Primary Nesting Zone (View 2)</strong><br>Back panel and floor contaminated with dense frass coverage. Water line area heavily soiled. Live roach visible on wall.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-kitchen-floor.jpg" alt="Kitchen floor - live roach activity">
+      <div class="photo-caption"><strong>Kitchen Floor — Live Roach Activity</strong><br>Multiple live German Roaches confirmed across kitchen floor. Each visible specimen represents an individual roach observed during inspection.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-cabinet-drawer.jpg" alt="Kitchen cabinet drawer - live adult roach">
+      <div class="photo-caption"><strong>Kitchen Cabinet Drawer — Live Adult Roach</strong><br>Adult German Roach on cabinet drawer front adjacent to refrigerator, directly within the primary nesting zone.</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com · License JF288808 / JB304313</div>
+    <div>1145 Lucaya Circle, Orlando, FL 32824 · Service Date: April 8, 2026 · Page 3</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 4: PHOTO DOCUMENTATION (2) -->
+<!-- ============================================================ -->
+<div class="page">
+  <div class="page-header">
+    <img src="logo.jpg" class="header-logo" alt="Pest Pro">
+    <div class="right-block">
+      <strong>German Roach Cleanout — Service Report</strong>
+      1145 Lucaya Circle, Orlando, FL 32824<br>
+      Service Date: April 8, 2026 · Account #1052
+    </div>
+  </div>
+
+  <div class="section-title">Photo Documentation — Harborage Areas &amp; Spread</div>
+  <div class="photo-grid">
+    <div class="photo-item">
+      <img src="photo-pantry-tracks.jpg" alt="Pantry door tracks - active nest">
+      <div class="photo-caption"><strong>Pantry Door Tracks — Active Nesting Colony</strong><br>Live roaches visible inside door track channel. Heavy frass buildup and surface staining consistent with long-term harborage.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-under-sink.jpg" alt="Under sink - roach activity and cabinetry gaps">
+      <div class="photo-caption"><strong>Under Sink — Roach Activity &amp; Unsealed Gaps</strong><br>Live roach on cabinet floor. Frass visible on walls. Clearly unsealed gaps in cabinetry providing direct wall void access.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-ceiling-corner.jpg" alt="Ceiling corner - frass spotting">
+      <div class="photo-caption"><strong>Ceiling Corner — Upper Wall Void Harborage</strong><br>Heavy frass spotting on ceiling and wall surfaces. Confirms infestation has spread into upper wall voids, well above floor level.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-cabinet-nymph.jpg" alt="Kitchen cabinet - late instar nymph">
+      <div class="photo-caption"><strong>Kitchen Cabinet — Late-Stage Nymph (3rd–4th Instar)</strong><br>Mid-development nymph on cabinet door near hinge. Frass spotting along upper cabinet edge. Confirms all development stages present.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-pregnant-roach.jpg" alt="Pregnant female with ootheca">
+      <div class="photo-caption"><strong>Gravid Female — Active Ootheca (Egg Case)</strong><br>Pregnant female German Roach with ootheca visibly protruding. A single ootheca contains 30–40 eggs. Confirms active on-site reproduction cycle.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-closet.jpg" alt="Master bedroom closet - frass staining">
+      <div class="photo-caption"><strong>Master Bedroom Closet — Frass Staining &amp; Prior Activity</strong><br>Frass staining and roach debris on wall above shelving. Evidence of established activity within sleeping areas.</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com · License JF288808 / JB304313</div>
+    <div>1145 Lucaya Circle, Orlando, FL 32824 · Service Date: April 8, 2026 · Page 4</div>
+  </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 5: PHOTO DOCUMENTATION (3) & CLOSING -->
+<!-- ============================================================ -->
+<div class="page">
+  <div class="page-header">
+    <img src="logo.jpg" class="header-logo" alt="Pest Pro">
+    <div class="right-block">
+      <strong>German Roach Cleanout — Service Report</strong>
+      1145 Lucaya Circle, Orlando, FL 32824<br>
+      Service Date: April 8, 2026 · Account #1052
+    </div>
+  </div>
+
+  <div class="section-title">Photo Documentation — Full-Unit Spread Confirmed</div>
+  <div class="photo-grid">
+    <div class="photo-item">
+      <img src="photo-living-room-baseboard.jpg" alt="Living room baseboard">
+      <div class="photo-caption"><strong>Living Room — Baseboard Activity</strong><br>Live nymph on wall at baseboard level. Dead roach on floor. Active presence confirmed in primary common living area.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-hallway.jpg" alt="Hallway - live roach at door frame">
+      <div class="photo-caption"><strong>Hallway — Live Roach at Door Frame</strong><br>Adult German Roach at base of door frame. Frass debris on floor nearby. Confirms spread through primary corridors of the unit.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-secondary-bedroom.jpg" alt="Secondary bedroom baseboard">
+      <div class="photo-caption"><strong>Secondary Bedroom — Baseboard Activity</strong><br>Live adult German Roach on wall at baseboard level. All sleeping areas confirmed infested.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-guest-bathroom.jpg" alt="Secondary bathroom - live adult roach">
+      <div class="photo-caption"><strong>Secondary / Guest Bathroom — Live Adult Roach</strong><br>Clear close-up of live adult German Roach on floor at baseboard junction. Activity confirmed in both bathrooms.</div>
+    </div>
+    <div class="photo-item">
+      <img src="photo-master-window.jpg" alt="Master bedroom window sill - live nymph">
+      <div class="photo-caption"><strong>Master Bedroom — Window Sill Activity</strong><br>Live nymph on window sill near frame. Confirms spread into master bedroom.</div>
+    </div>
+  </div>
+
+  <div class="section-title">Technician Statement</div>
+  <p class="section-sub">
+    The infestation observed at 1145 Lucaya Circle represents a well-established, heavy German Roach colony spanning the entire unit. All life stages were confirmed present, consistent with an infestation that has been developing over an extended period. Treatment was performed thoroughly; however, due to the density and distribution of nesting activity — including harboring within appliance voids, wall voids, and upper ceiling areas — this property will require follow-up treatment to achieve full eradication. The 3–5 day follow-up window is critical. Pest Pro is prepared to return promptly upon scheduling.
+  </p>
+
+  <div class="section-title">Service Invoice Summary</div>
+  <table class="info-table">
+    <tr>
+      <td class="label">Service</td>
+      <td class="value">German Roach Cleanout — Initial Treatment</td>
+      <td class="label">Regular Rate</td>
+      <td class="value">$240.00</td>
+    </tr>
+    <tr>
+      <td class="label">Discount Applied</td>
+      <td class="value">50% (per D.R.)</td>
+      <td class="label">Invoiced Amount</td>
+      <td class="value"><strong>$120.00</strong></td>
+    </tr>
+    <tr>
+      <td class="label">Next Service</td>
+      <td class="value" colspan="3">Follow-up treatment recommended within 3–5 days (by April 11–13, 2026)</td>
+    </tr>
+  </table>
+
+  <div class="sig-block">
+    <div class="sig-item">
+      <div class="sig-line"></div>
+      <div class="sig-label">Technician Signature — Daniel Rumsey, CPO (License JF288808)</div>
+    </div>
+    <div class="sig-item">
+      <div class="sig-line"></div>
+      <div class="sig-label">Client / Authorized Representative — Venchi Management, LLC</div>
+    </div>
+    <div class="sig-item">
+      <div class="sig-line"></div>
+      <div class="sig-label">Date</div>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div>Pest Pro, LLC · (407) 922-2276 · info@PestProLLC.com · 3211 Vineland Road #107, Kissimmee, FL 34746<br>License JF288808 / JB304313 · Serving Orange, Osceola, Lake, Polk &amp; Seminole Counties</div>
+    <div style="text-align:right;">1145 Lucaya Circle, Orlando, FL 32824<br>Service Date: April 8, 2026 · Page 5</div>
+  </div>
+</div>
+
+</body>
+</html>
